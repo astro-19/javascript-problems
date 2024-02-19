@@ -22,6 +22,4 @@ function twoSum(nums, target) {
   }
 }
 
-console.time();
 console.log(twoSum(a, 9));
-console.timeEnd();
