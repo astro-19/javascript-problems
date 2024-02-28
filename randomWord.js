@@ -11,7 +11,7 @@ function randomWord(word) {
     }
     for (let i of randomWords) {
         if (i !== randomWord) {
-            randomWords.push[randomWord]
+            randomWords.push(randomWord)
             RandomWordCount.randomWord += 1
         }
     }
