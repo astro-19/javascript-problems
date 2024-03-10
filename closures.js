@@ -1,11 +1,21 @@
-function Counter() {
-    var count = 0
-    this.incrementCount = function () {
-      count++
-      console.log(count)
-    }
+// function Counter() {
+//     var count = 0
+//     this.incrementCount = function () {
+//       count++
+//       console.log(count)
+//     }
+//   }
+
+//   var adder = new Counter()
+//   adder.incrementCount()
+
+
+function createBase(num) {
+  return function (N){
+    return num + N
   }
-  
-  console.log(count) // Error: count is not defined
-  var adder = new Counter()
-  adder.incrementCount() // 1
+}
+
+var addBase = createBase(7)
+
+console.log(addBase(10))
