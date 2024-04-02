@@ -48,9 +48,9 @@ stack.push(3);
 stack.push(4);
 stack.push(5);
 console.log(stack.displayStack(stack));
-console.log("Rotate the stack elements to the left:")
+console.log("Rotate the stack elements to the right:")
 console.log(stack.rotateLeft());
-console.log("Again rotate the stack elements to the left:")
+console.log("Again rotate the stack elements to the right:")
 console.log(stack.rotateLeft());
-console.log("Again rotate the stack elements to the left:")
+console.log("Again rotate the stack elements to the right:")
 console.log(stack.rotateLeft());
