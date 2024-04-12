@@ -11,10 +11,10 @@
 let color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
 
 function Ordinal(n) {
-    let o = ["th", "st", "nd", "rd"],
-        x = n % 100;
+    let order = ["th", "st", "nd", "rd"],
+        date = n % 100;
 
-    return x + (o[(x - 20) % 10] || o[x] || o[0]);
+    return date + (order[(date - 20) % 10] || order[date] || order[0]);
 }
 for (let n = 0; n < color.length; n++) {
 
