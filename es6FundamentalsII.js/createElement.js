@@ -1,4 +1,3 @@
-//#Source https://bit.ly/2neWfJ2
 // Define a function 'createElement' that creates a DOM element from the provided HTML string
 const createElement = (str) => {
   const el = document.createElement("div");
