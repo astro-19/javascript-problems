@@ -1,6 +1,6 @@
 // Import the default function
-import greet from './greet.js';
-import { add, subtract, multiply, divide } from './arithmetic.js';
+import greet, { add, subtract } from './greet.js';
+// import { add, subtract, multiply, divide } from './arithmetic.js';
 import * as utils from './utilities.js';
 
 // Use the imported function
