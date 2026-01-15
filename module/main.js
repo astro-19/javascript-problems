@@ -9,3 +9,24 @@ async function loadAndMultiply(a, b) {
 
 // Calling the function
 loadAndMultiply(4, 5); // Logs 20
+
+//main.js
+// Function to conditionally import a module and use its functions
+async function calculate(a, b, operation) {
+    if (operation === 'add') {
+        // Conditionally importing the module for addition
+        const { add } = await import('./mathUtils.js');
+        console.log(add(a, b)); // Logs the sum
+    } else if (operation === 'multiply') {
+        // Conditionally importing the module for multiplication
+        const { multiply } = await import('./mathUtils.js');
+        console.log(multiply(a, b)); // Logs the product
+    } else {
+        console.log('Invalid operation'); // Handles invalid input
+    }
+}
+
+// Calling the function
+calculate(2, 3, 'add'); // Logs 5
+calculate(2, 3, 'multiply'); // Logs 6
+
