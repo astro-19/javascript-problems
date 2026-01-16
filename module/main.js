@@ -1,32 +1,42 @@
-// Async function to dynamically import and use the module
-async function loadAndMultiply(a, b) {
-    // Dynamically importing the module
-    const mathModule = await import('./mathOperations.js');
+// // Async function to dynamically import and use the module
+// async function loadAndMultiply(a, b) {
+//     // Dynamically importing the module
+//     const mathModule = await import('./mathOperations.js');
 
-    // Using the imported function
-    console.log(mathModule.multiply(a, b)); // Logs the result of multiplication
-}
+//     // Using the imported function
+//     console.log(mathModule.multiply(a, b)); // Logs the result of multiplication
+// }
 
-// Calling the function
-loadAndMultiply(4, 5); // Logs 20
+// // Calling the function
+// loadAndMultiply(4, 5); // Logs 20
 
-//main.js
-// Function to conditionally import a module and use its functions
-async function calculate(a, b, operation) {
-    if (operation === 'add') {
-        // Conditionally importing the module for addition
-        const { add } = await import('./mathUtils.js');
-        console.log(add(a, b)); // Logs the sum
-    } else if (operation === 'multiply') {
-        // Conditionally importing the module for multiplication
-        const { multiply } = await import('./mathUtils.js');
-        console.log(multiply(a, b)); // Logs the product
-    } else {
-        console.log('Invalid operation'); // Handles invalid input
-    }
-}
+// //main.js
+// // Function to conditionally import a module and use its functions
+// async function calculate(a, b, operation) {
+//     if (operation === 'add') {
+//         // Conditionally importing the module for addition
+//         const { add } = await import('./mathUtils.js');
+//         console.log(add(a, b)); // Logs the sum
+//     } else if (operation === 'multiply') {
+//         // Conditionally importing the module for multiplication
+//         const { multiply } = await import('./mathUtils.js');
+//         console.log(multiply(a, b)); // Logs the product
+//     } else {
+//         console.log('Invalid operation'); // Handles invalid input
+//     }
+// }
 
-// Calling the function
-calculate(2, 3, 'add'); // Logs 5
-calculate(2, 3, 'multiply'); // Logs 6
+// // Calling the function
+// calculate(2, 3, 'add'); // Logs 5
+// calculate(2, 3, 'multiply'); // Logs 6
+
+// *************************************************************************
+// Importing constants using named exports
+import { PI, EULER, GOLDEN_RATIO } from './constants.js';
+
+// Using the imported constants
+console.log(`Value of PI: ${PI}`); // Logs 3.14159
+console.log(`Value of Euler's Number: ${EULER}`); // Logs 2.71828
+console.log(`Value of Golden Ratio: ${GOLDEN_RATIO}`); // Logs 1.61803
+
 
