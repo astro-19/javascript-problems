@@ -40,3 +40,12 @@ console.log(`Value of Euler's Number: ${EULER}`); // Logs 2.71828
 console.log(`Value of Golden Ratio: ${GOLDEN_RATIO}`); // Logs 1.61803
 
 
+// *************************************************************************
+// This file imports and uses the aggregated exports.
+// Importing aggregated exports
+import { add, subtract, toUpperCase, toLowerCase } from './index.js';
+// Using the imported functions
+console.log(add(5, 3)); // Logs 8
+console.log(subtract(10, 4)); // Logs 6
+console.log(toUpperCase('hello')); // Logs HELLO
+console.log(toLowerCase('WORLD')); // Logs world
