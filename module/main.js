@@ -60,3 +60,12 @@ import data from './data.json';
 console.log(`Name: ${data.name}`); // Logs "Name: John Doe"
 console.log(`Age: ${data.age}`); // Logs "Age: 30"
 console.log(`Profession: ${data.profession}`); // Logs "Profession: Developer"
+
+// *************************************************************************
+// main.js  
+// Importing the Person class
+import { Person } from './Person.js';
+
+// Instantiating and using the class
+const pers = new Person('Agenor Tigerlily', 30);
+console.log(pers.introduce());
