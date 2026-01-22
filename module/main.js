@@ -62,10 +62,31 @@ console.log(`Age: ${data.age}`); // Logs "Age: 30"
 console.log(`Profession: ${data.profession}`); // Logs "Profession: Developer"
 
 // *************************************************************************
-// main.js  
 // Importing the Person class
+// import { Person } from './Person.js';
+
+// // Instantiating and using the class
+// const pers = new Person('Agenor Tigerlily', 30);
+// console.log(pers.introduce());
+
+// *************************************************************************
+
 import { Person } from './Person.js';
 
-// Instantiating and using the class
-const pers = new Person('Agenor Tigerlily', 30);
-console.log(pers.introduce());
+// Extending the Person class
+class Employee extends Person {
+    constructor(name, age, position) {
+        super(name, age); // Calling the parent constructor
+        this.position = position; // Adding a new property
+    }
+
+    work() {
+        // Method specific to the Employee class
+        return `${this.name} is working as a ${this.position}.`;
+    }
+}
+
+// Instantiating and using the extended class
+const alice = new Employee('Viola Philomela', 28, 'Software Engineer');
+console.log(alice.introduce());
+console.log(alice.work());
