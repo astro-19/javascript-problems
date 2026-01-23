@@ -90,3 +90,12 @@ class Employee extends Person {
 const alice = new Employee('Viola Philomela', 28, 'Software Engineer');
 console.log(alice.introduce());
 console.log(alice.work());
+
+// *************************************************************************
+// Importing the default export and destructuring only the required functions
+import mathUtils from './mathUtils.js';
+const { add, divide } = mathUtils;
+
+// Using the destructured functions
+console.log(add(8, 2)); // Logs 10
+console.log(divide(20, 4)); // Logs 5
