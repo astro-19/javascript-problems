@@ -99,3 +99,12 @@ const { add, divide } = mathUtils;
 // Using the destructured functions
 console.log(add(8, 2)); // Logs 10
 console.log(divide(20, 4)); // Logs 5
+
+// *************************************************************************
+// Importing the entire module as a namespace
+import * as Constants from './constants.js';
+
+// Accessing constants and functions from the namespace
+console.log(Constants.PI); // Logs 3.14159
+console.log(Constants.circleArea(5)); // Logs 78.53975 (area of a circle with radius 5)
+console.log(Constants.exponential(2, 3)); // Logs 8 (2 raised to the power 3)  
