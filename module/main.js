@@ -107,4 +107,13 @@ import * as Constants from './constants.js';
 // Accessing constants and functions from the namespace
 console.log(Constants.PI); // Logs 3.14159
 console.log(Constants.circleArea(5)); // Logs 78.53975 (area of a circle with radius 5)
-console.log(Constants.exponential(2, 3)); // Logs 8 (2 raised to the power 3)  
+console.log(Constants.exponential(2, 3)); // Logs 8 (2 raised to the power 3)
+
+// *************************************************************************
+// Importing functions from both modules
+import { functionA } from './moduleA.js';
+import { functionB } from './moduleB.js';
+
+// Calling the functions
+functionA(); // Logs "Function A in Module A" and "Shared function called from Module A"
+functionB(); // Logs "Function B in Module B" and "Shared function called from Module B"
