@@ -117,3 +117,12 @@ import { functionB } from './moduleB.js';
 // Calling the functions
 functionA(); // Logs "Function A in Module A" and "Shared function called from Module A"
 functionB(); // Logs "Function B in Module B" and "Shared function called from Module B"
+
+// *************************************************************************
+// Importing functions from both modules
+import { functionA } from './moduleA.js';
+import { functionB } from './moduleB.js';
+
+// Calling the functions
+functionA(); // Logs both function outputs dynamically
+functionB(); // Logs both function outputs dynamically
