@@ -126,3 +126,12 @@ import { functionB } from './moduleB.js';
 // Calling the functions
 functionA(); // Logs both function outputs dynamically
 functionB(); // Logs both function outputs dynamically
+
+// *************************************************************************
+// Importing the named functions
+import { multiply } from './mathUtils.js';
+
+// Using the imported functions
+console.log(add(4, 5)); // Logs 9
+console.log(multiply(3, 7)); // Logs 21
+
