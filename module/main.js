@@ -135,3 +135,16 @@ import { multiply } from './mathUtils.js';
 console.log(add(4, 5)); // Logs 9
 console.log(multiply(3, 7)); // Logs 21
 
+// *************************************************************************
+// Importing the logger module for its side effects
+import './logger.js';
+
+// The module's side effect is executed when imported
+console.log('Main script executed.');
+
+// *************************************************************************
+// Importing the globalSetup module for its side effects
+import './globalSetup.js';
+
+// Using the global function defined as a side effect
+sayHello('Spock');
