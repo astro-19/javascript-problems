@@ -148,3 +148,13 @@ import './globalSetup.js';
 
 // Using the global function defined as a side effect
 sayHello('Spock');
+
+// *************************************************************************
+// Importing the module
+import { config, logMessage } from './moduleA.js';
+
+// Overriding the exported config object
+config.debug = true; // Enabling debug mode
+
+// Using the overridden export
+logMessage('This is a debug message.'); 
