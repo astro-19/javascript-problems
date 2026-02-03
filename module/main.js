@@ -157,4 +157,19 @@ import { config, logMessage } from './moduleA.js';
 config.debug = true; // Enabling debug mode
 
 // Using the overridden export
-logMessage('This is a debug message.'); 
+logMessage('This is a debug message.');
+
+// *************************************************************************
+// Importing the module
+import { fetchData as originalFetchData } from './moduleB.js';
+
+// Creating a wrapper for fetchData
+let fetchData = originalFetchData;
+
+// Overriding the fetchData function dynamically
+fetchData = function () {
+    return 'Mock data for testing';
+};
+
+// Using the overridden export
+console.log(fetchData()); // Logs "Mock data for testing" 
